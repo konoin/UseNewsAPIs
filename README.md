@@ -5,6 +5,6 @@ This application provides an example of working with the API. When writing this 
 
 25.03.2021 
 
-<img src="https://github.com/konoin/UseNewsAPIs/blob/main/First.png" width="200">
+<img src="https://github.com/konoin/UseNewsAPIs/blob/main/2021-03-25_21-06-20%20(1).gif" width="200">
 
 <img src="https://github.com/konoin/UseNewsAPIs/blob/main/Second.png" width="200">
