@@ -44,6 +44,14 @@ class NewsViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let descriptionViewController = self.storyboard?.instantiateViewController(withIdentifier: "DescriptionViewController") as? DescriptionViewController else {
+            return
+        }
+        descriptionViewController.articleInfo = listOfNews[indexPath.row]
+        navigationController?.pushViewController(descriptionViewController, animated: true)
+    }
 }
 
 extension NewsViewController: UISearchBarDelegate {

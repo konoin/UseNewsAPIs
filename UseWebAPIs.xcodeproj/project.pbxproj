@@ -15,6 +15,7 @@
 		85E5EF3F260C91D2000DB102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85E5EF3D260C91D2000DB102 /* LaunchScreen.storyboard */; };
 		85E5EF49260C97F4000DB102 /* NewsJSONStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5EF48260C97F4000DB102 /* NewsJSONStruct.swift */; };
 		85E5EF4C260C9978000DB102 /* NewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5EF4B260C9978000DB102 /* NewsRequest.swift */; };
+		85E5EF51260CB6D5000DB102 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5EF50260CB6D5000DB102 /* DescriptionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		85E5EF40260C91D2000DB102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85E5EF48260C97F4000DB102 /* NewsJSONStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsJSONStruct.swift; sourceTree = "<group>"; };
 		85E5EF4B260C9978000DB102 /* NewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRequest.swift; sourceTree = "<group>"; };
+		85E5EF50260CB6D5000DB102 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				85E5EF48260C97F4000DB102 /* NewsJSONStruct.swift */,
 				85E5EF4B260C9978000DB102 /* NewsRequest.swift */,
 				85E5EF38260C91D1000DB102 /* Main.storyboard */,
+				85E5EF50260CB6D5000DB102 /* DescriptionViewController.swift */,
 				85E5EF3B260C91D2000DB102 /* Assets.xcassets */,
 				85E5EF3D260C91D2000DB102 /* LaunchScreen.storyboard */,
 				85E5EF40260C91D2000DB102 /* Info.plist */,
@@ -146,6 +149,7 @@
 				85E5EF37260C91D1000DB102 /* NewsViewController.swift in Sources */,
 				85E5EF33260C91D1000DB102 /* AppDelegate.swift in Sources */,
 				85E5EF4C260C9978000DB102 /* NewsRequest.swift in Sources */,
+				85E5EF51260CB6D5000DB102 /* DescriptionViewController.swift in Sources */,
 				85E5EF49260C97F4000DB102 /* NewsJSONStruct.swift in Sources */,
 				85E5EF35260C91D1000DB102 /* SceneDelegate.swift in Sources */,
 			);
