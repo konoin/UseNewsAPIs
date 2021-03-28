@@ -10,8 +10,7 @@ struct NewsRequest {
     let API_KEY = "8c85459fb1a84a36a5e4bf18697cbc35"
     
     init(countryCode: String) {
-        let resourceString = "https://newsapi.org/v2/top-headlines?country=\(countryCode)&category=business&apiKey=\(API_KEY)"
-        
+        let resourceString = "https://newsapi.org/v2/top-headlines?country=\(countryCode)&category=Business&apiKey=\(API_KEY)"
         guard let resourceURL = URL(string: resourceString) else {
 fatalError()
         }
