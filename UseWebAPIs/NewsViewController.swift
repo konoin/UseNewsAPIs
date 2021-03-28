@@ -10,6 +10,7 @@ import UIKit
 class NewsViewController: UITableViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var chooseCategory: UIBarButtonItem!
     
     var listOfNews = [Articles]() {
         didSet {
@@ -23,8 +24,49 @@ class NewsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-    }
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", image: UIImage(systemName: "list.bullet"), primaryAction: nil, menu: menuItem())
+    }
+    
+    func menuItem() -> UIMenu {
+        
+        let addMenuLine = UIMenu(title: "Chose category", options: .destructive, children: [
+        
+            UIAction(title: "Business", image: UIImage(systemName: "briefcase"), handler: { (_) in
+                print("It's work")
+            }),
+            UIAction(title: "Entertainment", image: UIImage(systemName: "tv"), handler: { (_) in
+                print("Seond work")
+            }),
+            UIAction(title: "General", image: UIImage(systemName: "book"), handler: { (_) in
+                            print("Seond work")
+            }),
+            UIAction(title: "Health", image: UIImage(systemName: "stethoscope"), handler: { (_) in
+                            print("Seond work")
+            }),
+            UIAction(title: "Sport", image: UIImage(systemName: "sportscourt"), handler: { (_) in
+                            print("Seond work")
+            }),
+            UIAction(title: "Technology", image: UIImage(systemName: "desktopcomputer"), handler: { (_) in
+                print("Somethink work")
+            }),
+            UIAction(title: "Science", image: UIImage(systemName: "function"), handler: { (_) in
+                print("Very interesting")
+            })
+        
+        ])
+      return addMenuLine
+    }
+    
+    
+    @IBAction func chooseCategoryTapped(_ sender: UIBarButtonItem) {
+    }
+    
     //MARK: - TableView data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {

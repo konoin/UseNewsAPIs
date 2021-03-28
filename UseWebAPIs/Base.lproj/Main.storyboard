@@ -52,8 +52,15 @@
                             <outlet property="delegate" destination="3Vr-35-ISH" id="6M1-to-Wgg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="News" id="R8x-Xb-gbU"/>
+                    <navigationItem key="navigationItem" title="News" id="R8x-Xb-gbU">
+                        <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="njC-wi-ULn">
+                            <connections>
+                                <action selector="chooseCategoryTapped:" destination="3Vr-35-ISH" id="RHm-A1-Jvt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="chooseCategory" destination="njC-wi-ULn" id="wkX-dp-fce"/>
                         <outlet property="searchBar" destination="Xc5-mM-SzW" id="utu-rh-tG3"/>
                     </connections>
                 </tableViewController>
@@ -69,26 +76,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-Zs-NmE">
-                                <rect key="frame" x="16" y="23" width="104" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlN-Zs-NmE">
+                                <rect key="frame" x="16" y="23" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-5V-No8">
-                                <rect key="frame" x="16" y="51.5" width="56" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-5V-No8">
+                                <rect key="frame" x="16" y="52" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Published at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUF-oe-Gpd">
-                                <rect key="frame" x="16" y="80" width="98.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Published at:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUF-oe-Gpd">
+                                <rect key="frame" x="16" y="81" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="e0U-5q-jNq">
-                                <rect key="frame" x="16" y="128" width="343" height="519"/>
+                                <rect key="frame" x="16" y="129" width="343" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -99,12 +106,12 @@
                         <viewLayoutGuide key="safeArea" id="m5p-DV-MTN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="m5p-DV-MTN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vUF-oe-Gpd" secondAttribute="trailing" symbolic="YES" id="58I-BC-hYi"/>
                             <constraint firstItem="TlN-Zs-NmE" firstAttribute="top" secondItem="m5p-DV-MTN" secondAttribute="top" constant="23" id="6MB-ra-oUl"/>
                             <constraint firstItem="e0U-5q-jNq" firstAttribute="trailing" secondItem="m5p-DV-MTN" secondAttribute="trailing" constant="-16" id="7EY-Qr-980"/>
                             <constraint firstItem="e0U-5q-jNq" firstAttribute="bottom" secondItem="m5p-DV-MTN" secondAttribute="bottom" constant="-20" id="8Vb-sq-pAd"/>
                             <constraint firstItem="e0U-5q-jNq" firstAttribute="top" secondItem="vUF-oe-Gpd" secondAttribute="bottom" constant="27.5" id="CWI-b2-Hyy"/>
                             <constraint firstItem="TlN-Zs-NmE" firstAttribute="leading" secondItem="KZs-5V-No8" secondAttribute="leading" id="Cfc-O5-bFq"/>
-                            <constraint firstItem="m5p-DV-MTN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vUF-oe-Gpd" secondAttribute="trailing" symbolic="YES" id="HFO-ue-aXK"/>
                             <constraint firstItem="vUF-oe-Gpd" firstAttribute="top" secondItem="KZs-5V-No8" secondAttribute="bottom" constant="8" symbolic="YES" id="ToV-do-im1"/>
                             <constraint firstItem="KZs-5V-No8" firstAttribute="leading" secondItem="m5p-DV-MTN" secondAttribute="leading" constant="16" id="U2g-Nu-GJU"/>
                             <constraint firstItem="KZs-5V-No8" firstAttribute="top" secondItem="TlN-Zs-NmE" secondAttribute="bottom" constant="8" symbolic="YES" id="Wcb-UV-mOO"/>
@@ -112,7 +119,7 @@
                             <constraint firstItem="vUF-oe-Gpd" firstAttribute="leading" secondItem="m5p-DV-MTN" secondAttribute="leading" constant="16" id="agw-bG-9xd"/>
                             <constraint firstItem="e0U-5q-jNq" firstAttribute="leading" secondItem="m5p-DV-MTN" secondAttribute="leading" constant="16" id="heW-zA-AEK"/>
                             <constraint firstItem="vUF-oe-Gpd" firstAttribute="top" secondItem="KZs-5V-No8" secondAttribute="bottom" constant="8" symbolic="YES" id="rvv-FN-gFo"/>
-                            <constraint firstItem="m5p-DV-MTN" firstAttribute="trailing" secondItem="TlN-Zs-NmE" secondAttribute="trailing" constant="255" id="uJb-hh-bGZ"/>
+                            <constraint firstItem="m5p-DV-MTN" firstAttribute="trailing" secondItem="TlN-Zs-NmE" secondAttribute="trailing" constant="16" id="uJb-hh-bGZ"/>
                             <constraint firstItem="m5p-DV-MTN" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KZs-5V-No8" secondAttribute="trailing" symbolic="YES" id="yPi-oj-2WP"/>
                         </constraints>
                     </view>
